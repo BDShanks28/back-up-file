@@ -28,4 +28,17 @@ public class OvalBalloon extends Balloon
                     yCenter - radius, 2*radius, 4*radius);
    }
 
+   @Override
+   public double distance(int x, int y)
+   {
+      int xCenter = getX();
+      int yCenter = getY();
+      
+      double dx = x - xCenter;
+      double dy = y - yCenter;
+      
+      dy*=2;
+      
+      return Math.sqrt(dx*dx + dy*dy);
+   }
 }
