@@ -21,11 +21,11 @@ public class OvalBalloon extends Balloon
       Color color = getColor();
       g.setColor(color);
       if (makeItFilled)
-         g.fillOval(xCenter - radius,
-                    yCenter - radius, 2*radius, 4*radius);
+         g.fillOval(xCenter - radius/2,
+                    yCenter - radius, radius, 2*radius);
       else
-         g.drawOval(xCenter - radius,
-                    yCenter - radius, 2*radius, 4*radius);
+         g.drawOval(xCenter - radius/2,
+                    yCenter - radius, radius, 2*radius);
    }
 
    @Override
@@ -35,8 +35,9 @@ public class OvalBalloon extends Balloon
       int yCenter = getY();
       
       double dx = x - xCenter;
-      double dy = y - yCenter;
+      dx*=2;
       
+      double dy = y - yCenter;
       dy*=2;
       
       return Math.sqrt(dx*dx + dy*dy);
