@@ -2,16 +2,13 @@ public class VariableTest
 {
    public static void main(String[]args)
    {
-      VariableTest myTest = new VariableTest();
-      int myNumber = (2 + 5) % 2;
-      myTest.anotherMethod(myNumber);
-      
-      
+      System.out.println(convertGallons(3.0));
       
    }
    
-   public void anotherMethod(int myNumber)
+   public static int convertGallons(double l)
    {
-      System.out.println(myNumber);
+      int gallons = (int)(3.785411784*l);
+      return gallons;
    }
 }
