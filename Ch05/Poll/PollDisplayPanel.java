@@ -12,9 +12,11 @@ public class PollDisplayPanel extends JPanel
 {
   private String name1, name2, name3;
   // Declare the int fields count1, count2, count3:
-
-  ________________________________________________________
-
+  
+  private int count1;
+  private int count2;
+  private int count3;
+   
   // Constructor
   public PollDisplayPanel(String nm1, String nm2, String nm3)
   {
@@ -31,31 +33,28 @@ public class PollDisplayPanel extends JPanel
   public void vote1()
   {
 
-    ______________________________________
+   count1 ++;
   }
 
   // Increments count2
   public void vote2()
   {
 
-    ______________________________________
+    count2 ++;
   }
 
   // Increments count3
   public void vote3()
   {
 
-    ______________________________________
+    count3 ++;
   }
 
   // Returns a string representation of this object
   public String toString()
   {
-    return   _______________________________ +
-
-        ____________________________________ +
-
-        ________________________________ ;
+    return   name1 + " has" + count1 + " votes." + name2 + " has" + count2 + " votes." + name3 + " has" + count3 + " votes.";
+    
   }
 
   // Redefines JPanel's paintComponent to draw this pie chart
