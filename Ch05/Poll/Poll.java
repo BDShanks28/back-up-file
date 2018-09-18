@@ -12,11 +12,11 @@ public class Poll extends JFrame
 {
   public Poll()
   {
-    super("Vote for Tami, Brian, or Liz");
+    super("Vote for Luke, Alex, or Jake");
 
     Container c = getContentPane();
     c.setBackground(Color.WHITE);
-    PollDisplayPanel chart = new PollDisplayPanel("Tami", "Brian", "Liz");
+    PollDisplayPanel chart = new PollDisplayPanel("Luke", "Alex", "Jake");
     PollControlPanel controls = new PollControlPanel(chart);
     c.add(chart, BorderLayout.CENTER);
     c.add(controls, BorderLayout.SOUTH);
