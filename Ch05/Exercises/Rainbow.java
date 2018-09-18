@@ -11,10 +11,13 @@ import javax.swing.JPanel;
 public class Rainbow extends JPanel
 {
   // Declare skyColor:
-  // ________________________________________________
-
+  // Blue
+  private Color skyColor;
+   
   public Rainbow()
   {
+    skyColor = Color.BLUE;
+    
     setBackground(skyColor);
   }
 
@@ -24,7 +27,9 @@ public class Rainbow extends JPanel
     super.paintComponent(g);
     int width = getWidth();    
     int height = getHeight();
-
+    int xCenter = getX();
+    int yCenter = getY();
+    int rRadius = getR();
     // Declare and initialize local int variables xCenter, yCenter
     // that represent the center of the rainbow rings:
     // ________________________________________________
