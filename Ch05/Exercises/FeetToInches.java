@@ -7,7 +7,7 @@ public class FeetToInches
   public static int toInches(int feet, int inches)
   {
 
-    ______________________________ ;
+     ;
   }
 
   public static void main(String[] args)
