@@ -59,7 +59,7 @@ public class Bmi extends JFrame
   // over squared height in meters.
   private double calculateBmi(int lbs, int inches)
   {
-    
+   return (int) ((double) lbs/(inches*inches)*703+0.5);
     
   }
 
