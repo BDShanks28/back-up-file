@@ -27,9 +27,9 @@ public class Rainbow extends JPanel
     super.paintComponent(g);
     int width = getWidth();    
     int height = getHeight();
-    int xCenter = (width/2);
-    int yCenter = (height/4);
-    int largeRadius = (width*(3/4));
+    int xCenter = width/2;
+    int yCenter = height*3/4;
+    int largeRadius = width/4;
     // Declare and initialize local int variables xCenter, yCenter
     // that represent the center of the rainbow rings:
     // 
