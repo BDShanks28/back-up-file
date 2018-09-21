@@ -40,7 +40,7 @@ public class Rainbow extends JPanel
     g.setColor(Color.RED);
 
     // Draw the large semicircle:
-    g.fillArc( x, y, size, size, from, degrees);
+    g.fillArc( xCenter - largeRadius, yCenter - largeRadius, 2*largeRadius, 2*largeRadius, 0,180);
 
     // Declare and initialize the radii of the small and medium
     // semicircles and draw them:
