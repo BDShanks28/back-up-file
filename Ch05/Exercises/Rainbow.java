@@ -44,7 +44,13 @@ public class Rainbow extends JPanel
 
     // Declare and initialize the radii of the small and medium
     // semicircles and draw them:
+    int smallRadius = height/4;
+    int mediumRadius = (int)Math.sqrt(smallRadius * largeRadius);
+    g.setColor(Color.GREEN);
+    g.fillArc( xCenter - mediumRadius, yCenter - mediumRadius, 2*mediumRadius, 2*mediumRadius, 0,180);
     
+    g.setColor(Color.MAGENTA);
+    g.fillArc( xCenter - smallRadius, yCenter - smallRadius, 2*smallRadius, 2*smallRadius, 0,180);
 
     // Calculate the radius of the innermost (sky-color) semicircle
     // so that the width of the middle (green) ring is the
