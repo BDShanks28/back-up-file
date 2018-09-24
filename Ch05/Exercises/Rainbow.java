@@ -51,6 +51,10 @@ public class Rainbow extends JPanel
     
     g.setColor(Color.MAGENTA);
     g.fillArc( xCenter - smallRadius, yCenter - smallRadius, 2*smallRadius, 2*smallRadius, 0,180);
+    
+    g.setColor(Color.CYAN);
+    g.fillArc( xCenter - smallRadius, yCenter - smallRadius, smallRadius, smallRadius, 0,180);
+
 
     // Calculate the radius of the innermost (sky-color) semicircle
     // so that the width of the middle (green) ring is the
