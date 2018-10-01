@@ -15,8 +15,7 @@ public class CrapsGame
   public int processRoll(int total)
   {
 
-    __________________________________________
-    ...
+    
 
     return result;
   }
