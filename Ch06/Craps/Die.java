@@ -4,7 +4,7 @@ public class Die
    
    public void roll()
    {
-      Math.random()
+      numDots = (int)(Math.random()*6)+1;
    }
    
    public int getNumDots()
