@@ -74,12 +74,49 @@ public class MyMath
 
     return true;
   }
+  
+  public static boolean isPerfect(int n)
+  {
+   
+   
+   //check if even, if not -> false
+   if (n % 2 == 1) return false;
+   
+   //Make a loop that finds factors and adds them to a running sum. If sum = n -> return true
+   int sum = 1; //Since n is even, 1 and 2 are both factors -> 1 + 2 = 3
+   for (int i = 2; i*i < n; i++)
+   {
+      //Check if i is a factor of n -> if so add both  and n/i to your sum
+      if (n % i == 0) 
+      {
+         sum =  i + (n/i) + sum;
+      }
+      
+   }
+   if (sum == n) return true;
+   return false;
+  }
+  
+  public static void findFirstNPerfect(int n)
+  {
+   int count = 0;
+   int num = 2;
+   while (count < n)
+   {
+      if (isPerfect(num))
+      {
+         count++;
+         System.out.print(num + ", ");
+      }
+      num++;
+   }
+  }
 
   /*********************************************************************/
 
   public static void main(String[] args)
   {
-    Scanner kb = new Scanner(System.in);
+    /*Scanner kb = new Scanner(System.in);
     int n;
 
     do
@@ -98,7 +135,8 @@ public class MyMath
       if (isPrime(k))
         System.out.print(k + " ");
     System.out.println();
-    System.out.println("Goldbach conjecture up to " + n + ": " + testGoldbach(n));
+    System.out.println("Goldbach conjecture up to " + n + ": " + testGoldbach(n));*/
+  findFirstNPerfect(4);
   }
 }
 
