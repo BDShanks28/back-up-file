@@ -6,10 +6,9 @@ public class StringTester
    
    public static void main(String[] args)
    {
-      String example = "Window";
-      System.out.println(example.length());
-      
-      String letter = "" + example.charAt(4);
-      System.out.println(letter);
+      String s1 = "West Virginia";
+      String s2 = s1.replace( "West Virginia", "Mountain Momma");
+      System.out.println(s1);
+      System.out.println(s2);
    }
 }
