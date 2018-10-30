@@ -12,13 +12,13 @@ public class LipogramAnalyzer
    }
    
    /**
-   * retrns saved text STring withh all characters
+   * retrns saved text String withh all characters
    * equal to a specified letter replaced with a pound sign (#)
    */
    
    public String mark(char letter)
    {
-      
+      return text.replace(letter, '#');
    }
    
     /**
@@ -29,7 +29,25 @@ public class LipogramAnalyzer
    
    public String allWordsWith(char letter)
    {
+      String result = "";
       
+      
+      
+      return (" ");
    }
    
+   
+   private int findSpace(int location)
+   {
+      while(location > 0)
+      {
+         locatin--;
+         if (Character.isWhitespace(text.charAt(location)))
+         {
+            location++;
+            return location;
+         }
+      }
+      return 0;
+   }
 }
