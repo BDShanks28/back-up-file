@@ -5,8 +5,7 @@
 public class CharMatrix
 {
   // Fields:
-  ________________________________________________
-  ...
+  private char[][] gameBoard;
 
   /**
    * Constructor: creates a grid with dimensions rows, cols,
@@ -14,8 +13,7 @@ public class CharMatrix
    */
   public CharMatrix(int rows, int cols)
   {
-    ________________________________________________
-    ...
+   
   }
 
   /**
