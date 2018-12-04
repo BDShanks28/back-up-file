@@ -13,7 +13,14 @@ public class CharMatrix
    */
   public CharMatrix(int rows, int cols)
   {
-   
+   gameBoard = new char [rows][cols];
+   for (int r = 0; r < rows; r++)
+   {
+      for (int c = 0; c < cols; c++)
+      {
+         gameBoard[r][c]= ' ';
+      }
+   }
   }
 
   /**
@@ -22,8 +29,15 @@ public class CharMatrix
    */
   public CharMatrix(int rows, int cols, char fill)
   {
-    ________________________________________________
-    ...
+    gameBoard = new char [rows][cols];
+   for (int r = 0; r < rows; r++)
+   {
+      for (int c = 0; c < cols; c++)
+      {
+         gameBoard[r][c]= fill;
+      }
+   }
+
   }
 
   /**
@@ -31,8 +45,7 @@ public class CharMatrix
    */
   public int numRows()
   {
-    ________________________________________________
-    ...
+    return gameBoard.length;
   }
 
   /**
@@ -40,8 +53,7 @@ public class CharMatrix
    */
   public int numCols()
   {
-    ________________________________________________
-    ...
+    return gameBoard[0].length;
   }
 
   /**
@@ -49,8 +61,7 @@ public class CharMatrix
    */
   public char charAt(int row, int col)
   {
-    ________________________________________________
-    ...
+    
   }
 
   /**
@@ -79,8 +90,13 @@ public class CharMatrix
    */
   public void fillRect(int row0, int col0, int row1, int col1, char fill)
   {
-    ________________________________________________
-    ...
+    for (r = row0; r <= row1; r++)
+    {
+      for (int c = col0; c <= col1; c++)
+      {
+         gameBoard[r][c] = fill;
+      }
+    }
   }
 
   /**
