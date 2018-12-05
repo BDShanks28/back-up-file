@@ -61,7 +61,7 @@ public class CharMatrix
    */
   public char charAt(int row, int col)
   {
-    
+    return gameBoard[row][col];
   }
 
   /**
@@ -69,8 +69,7 @@ public class CharMatrix
    */
   public void setCharAt(int row, int col, char ch)
   {
-    ________________________________________________
-    ...
+    gameBoard[row][col] = ch;
   }
 
   /**
@@ -79,8 +78,9 @@ public class CharMatrix
    */
   public boolean isEmpty(int row, int col)
   {
-    ________________________________________________
-    ...
+    char temp = gameBoard[row][col];
+    if(temp == ' ') return true;
+    else return false;
   }
 
   /**
@@ -90,7 +90,7 @@ public class CharMatrix
    */
   public void fillRect(int row0, int col0, int row1, int col1, char fill)
   {
-    for (r = row0; r <= row1; r++)
+    for (int r = row0; r <= row1; r++)
     {
       for (int c = col0; c <= col1; c++)
       {
@@ -106,8 +106,13 @@ public class CharMatrix
    */
   public void clearRect(int row0, int col0, int row1, int col1)
   {
-    ________________________________________________
-    ...
+    for (int r = row0; r <= row1; r++)
+    {
+      for (int c = col0; c <= col1; c++)
+      {
+         gameBoard[r][c] = ' ';
+      }
+    }
   }
 
   /**
@@ -115,8 +120,12 @@ public class CharMatrix
    */
   public int countInRow(int row)
   {
-    ________________________________________________
-    ...
+   int count = 0;
+   for (int r = 0; r <= gameBoard.length; r++)
+    {
+      if (gameBoard[row][r] != ' ') count++;
+    }
+    return count;
   }
 
   /**
@@ -124,7 +133,11 @@ public class CharMatrix
    */
   public int countInCol(int col)
   {
-    ________________________________________________
-    ...
+    int count = 0;
+   for (int c = 0; c <= gameBoard[0].length; c++)
+    {
+      if (gameBoard[col][c] != ' ') count++;
+    }
+    return count;
   }
 }
