@@ -13,8 +13,8 @@ public class FractionRunner
       
       Fraction d = new Fraction(b);
       System.out.println(d);
-      
-      Fraction e = b;
-      System.out.print(e);
+         
+      Fraction e=a.add(b);
+      System.out.println(e);
    }
 }

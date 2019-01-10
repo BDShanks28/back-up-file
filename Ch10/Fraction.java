@@ -21,6 +21,7 @@ public class Fraction
    {
       this.num = num;
       this.denum = denum;
+      reduce();
    }
    
    public Fraction(Fraction other)
@@ -35,4 +36,28 @@ public class Fraction
    {
       return this.num + "/" + denum;
    }
+      
+   public Fraction add(Fraction other)
+   {
+      int newNum = other.denum*this.num + other.num*this.denum;
+      int newDenum = this.denum*other.denum;
+      return new Fraction(newNum, newDenum);
+   }
+   
+   private void reduce()
+   {
+      int gcf = ....;
+      this.num /= gfc;
+      this.denum /= gfc;
+   }
+   
+   private int gcf()
+   {
+      for(int i = Math.min(num,denum); i > 0; i--)
+      {
+         if(num%i == 0 && denum%i = 0) return i;
+      }
+      return 1;
+   }
+   
 }
