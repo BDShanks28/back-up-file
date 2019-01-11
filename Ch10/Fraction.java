@@ -46,18 +46,21 @@ public class Fraction
    
    private void reduce()
    {
-      int gcf = ....;
-      this.num /= gfc;
-      this.denum /= gfc;
+      int gcf = gcf(num,denum);
+      this.num /= gcf;
+      this.denum /= gcf;
    }
    
-   private int gcf()
+   private int gcf(int a, int b)
    {
-      for(int i = Math.min(num,denum); i > 0; i--)
+      if (Math.min(a,b) == 0) return 1;
+      
+      while (a != b)
       {
-         if(num%i == 0 && denum%i = 0) return i;
+         if(a > b) a -= b;
+         else b -= a;
       }
-      return 1;
+      return a;
    }
    
 }
