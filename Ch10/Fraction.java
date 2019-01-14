@@ -44,6 +44,12 @@ public class Fraction
       return new Fraction(newNum, newDenum);
    }
    
+   public Fractionadd(int n)
+   {
+      Fraction temp = new Fraction(n,1);
+      return this.add(temp);
+   }
+   
    private void reduce()
    {
       int gcf = gcf(num,denum);
