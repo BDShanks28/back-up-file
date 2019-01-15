@@ -7,6 +7,8 @@ public class Vendor
   // Fields:
   private int price;
   private int stock;
+  private int deposit;
+  private int change;
 
   /**
    * Constructs a Vendor
@@ -17,24 +19,25 @@ public class Vendor
   {
     this.price = price;
     this.stock = stock;
+    this.deposit = 0;
   }
 
   /**
    * Sets the quantity of items in stock.
    * @param qty number of items to place in stock (int)
    */
-  ... setStock ...
+  public void setStock(int stock)
   {
-    ...
+    this.stock = stock;
   }
 
   /**
    * Returns the number of items currently in stock.
    * @return number of items currently in stock (int)
    */
-  ... getStock ...
+  public int getStock(int stock)
   {
-    ...
+    return this.stock;
   }
 
   /**
@@ -42,18 +45,19 @@ public class Vendor
    * deposited amount.
    * @param number of cents to add to the deposit (int)
    */
-  ... addMoney ...
+  public void addMoney(int cents)
   {
-    ...
+    this.deposit += cents;
+    
   }
 
   /**
    * Returns the currently deposited amount (in cents).
    * @return number of cents in the current deposit (int)
    */
-  ... getDeposit ...
+  public int getDeposit()
   {
-    ...
+    return this.deposit;
   }
 
   /**
@@ -65,9 +69,20 @@ public class Vendor
    * (moves it into change) and returns false.
    * @return true for a successful sale, false otherwise (boolean)
    */
-  ... makeSale ...
+  public boolean makeSale()
   {
-    ...
+    if(stock > 0 && deposit >= price)
+    {
+      change = deposit - price;
+      deposit = 0;
+      return true;
+    }
+    else
+    {
+      change = deposit;
+      deposit = 0;
+      return false;
+    }
   }
 
   /**
@@ -75,8 +90,8 @@ public class Vendor
    * the last sale or refund).
    * @return number of cents in the current change (int)
    */
-  ... getChange ...
+  public int getChange()
   {
-    ...
+    
   }
 }
