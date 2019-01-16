@@ -44,10 +44,30 @@ public class Fraction
       return new Fraction(newNum, newDenum);
    }
    
-   public Fractionadd(int n)
+   public Fraction add(int n)
    {
       Fraction temp = new Fraction(n,1);
       return this.add(temp);
+   }
+   
+   public Fraction multiply(Fraction f)
+   {
+      return new Fraction(f.getNum()*this.num, f.getDenum()*this.denum);
+   }
+   
+   public Fraction multiply(int num)
+   {
+      return new Fraction(this.num*num, this.denum);
+   }
+   
+   public Fraction divide(Fraction f)
+   {
+      return new Fraction(f.getNum()*this.denum, f.getDenum()* this.num);
+   }
+   
+   public Fraction divide(int num)
+   {
+      return new Fraction(this.num, this.denum * num);
    }
    
    private void reduce()
@@ -69,4 +89,13 @@ public class Fraction
       return a;
    }
    
+   private int getNum()
+   {
+      return this.num;
+   }
+   
+   private int getDenum()
+   {
+      return this.denum;
+   }
 }
