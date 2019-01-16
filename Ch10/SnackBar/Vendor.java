@@ -35,7 +35,7 @@ public class Vendor
    * Returns the number of items currently in stock.
    * @return number of items currently in stock (int)
    */
-  public int getStock(int stock)
+  public int getStock()
   {
     return this.stock;
   }
@@ -92,6 +92,6 @@ public class Vendor
    */
   public int getChange()
   {
-    
+    return change;
   }
 }
