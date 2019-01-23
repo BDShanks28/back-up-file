@@ -70,6 +70,11 @@ public class Fraction
       return new Fraction(this.num, this.denum * num);
    }
    
+   public double getValue(Fraction f)
+   {
+      return (double)(f.getNum() / f.getDenum());
+   }
+   
    private void reduce()
    {
       int gcf = gcf(num,denum);
