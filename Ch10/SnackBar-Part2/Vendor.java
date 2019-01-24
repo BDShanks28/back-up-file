@@ -79,6 +79,7 @@ public class Vendor
       change = deposit - price;
       deposit = 0;
       this.setStock(--stock);
+      sales += (double)price/100;
       return true;
     }
     else
