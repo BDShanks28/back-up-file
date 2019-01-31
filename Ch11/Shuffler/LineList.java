@@ -12,7 +12,7 @@ public class LineList
    public LineList()
    {
       lines = new ArrayList<String>();
-      Random rand = new Random();
+      rand = new Random();
    }
    //set n to the size of list
    //randomly select an element among the first n
