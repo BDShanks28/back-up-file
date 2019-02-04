@@ -17,12 +17,12 @@ public class IndexEntry
    
    public String getWord()
    {
-      
+      return "";
    }
    
    @Override
    public String toString()
    {
-      
+      return "";
    }
 }
