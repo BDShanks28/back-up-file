@@ -7,22 +7,23 @@ public class IndexEntry
    
    public IndexEntry(String word)
    {
-    
+    this.word = word;
+    numList = new ArrayList<Integer>();
    }
    
    public void add(int num)
    {
-      
+     numList.add(num);
    }
    
    public String getWord()
    {
-      return "";
+      return word;
    }
    
    @Override
    public String toString()
    {
-      return "";
+      return word;
    }
 }
