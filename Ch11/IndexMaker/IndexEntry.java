@@ -7,7 +7,7 @@ public class IndexEntry
    
    public IndexEntry(String word)
    {
-      
+    
    }
    
    public void add(int num)
