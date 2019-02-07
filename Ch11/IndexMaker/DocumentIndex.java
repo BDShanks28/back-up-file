@@ -17,7 +17,7 @@ public class DocumentIndex extends ArrayList<IndexEntry>
       {
          get(pos).add(num);
       }
-      el
+      else
       {
          IndexEntry newEntry = new IndexEntry(word);
          newEntry.add(num);
@@ -28,7 +28,7 @@ public class DocumentIndex extends ArrayList<IndexEntry>
    public void addAllWords(String word, int num)
    {
       String[] split = word.split("\\W+");
-      for(String word : split )
+      for(String words : split )
       {
          addWord(word, num);
       }
@@ -44,5 +44,4 @@ public class DocumentIndex extends ArrayList<IndexEntry>
       }
       return pos;
    }
-
 }

@@ -24,6 +24,6 @@ public class IndexEntry
    @Override
    public String toString()
    {
-      return word;
+      return word + numlist;
    }
 }
