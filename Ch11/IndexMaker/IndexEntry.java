@@ -24,10 +24,10 @@ public class IndexEntry
    @Override
    public String toString()
    {
-      return this.word + " " + for(int i = 0; i < numlist.length; i++)
+      return this.word + " ";
+      for(int i = 0; i < numlist.length; i++)
       {
-         int num = 0;
-         return num++;
+         return this.numlist;
       }
    }
 }
