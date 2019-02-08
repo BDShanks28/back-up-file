@@ -24,10 +24,11 @@ public class IndexEntry
    @Override
    public String toString()
    {
-      return this.word + " ";
-      for(int i = 0; i < numlist.length; i++)
+      String result = word.toUpperCase() + " ";
+      for(int i = 0; i < numList.size()-1; i++)
       {
-         return this.numlist;
+         result += numList.get(i) + ", ";
       }
+     return  result += numList.get(numList.size() - 1);
    }
 }

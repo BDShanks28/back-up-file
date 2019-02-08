@@ -13,7 +13,7 @@ public class DocumentIndex extends ArrayList<IndexEntry>
    public void addWord(String word, int num)
    {
       int pos = foundOrInserted(word);
-      if(word.toLowerCase().equals(this.get(pos).getWord()))
+      if(this.size() > 0 && pos < this.size() && word.toLowerCase().equals(this.get(pos).getWord()))
       {
          get(pos).add(num);
       }
@@ -25,10 +25,10 @@ public class DocumentIndex extends ArrayList<IndexEntry>
       }
    }
    
-   public void addAllWords(String word, int num)
+   public void addAllWords(String str, int num)
    {
-      String[] split = word.split("\\W+");
-      for(String words : split )
+      String[] words = str.split("\\W+");
+      for(String word : words )
       {
          addWord(word, num);
       }
@@ -38,7 +38,7 @@ public class DocumentIndex extends ArrayList<IndexEntry>
    private int foundOrInserted(String word)
    {
       int pos = 0;
-      while(word.toLowerCase().compareTo(this.get(pos).getWord()) < 0)
+      while(this.size() > 0 && pos < this.size() && word.toLowerCase().compareTo(this.get(pos).getWord()) < 0)
       {
           pos++;
       }
