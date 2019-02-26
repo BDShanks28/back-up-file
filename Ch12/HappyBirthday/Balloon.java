@@ -7,7 +7,7 @@
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Balloon
+public abstract class Balloon
 {
   private int xCenter, yCenter, radius;
   private Color color;
@@ -130,8 +130,5 @@ public class Balloon
    * @param g graphics context
    * @param makeItFilled draws a solid circle if true
    */
-  public void draw(Graphics g, boolean makeItFilled)
-  {
-
-  }
+  public abstract void draw(Graphics g, boolean makeItFilled);
 }
