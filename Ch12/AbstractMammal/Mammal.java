@@ -6,5 +6,11 @@ public abstract class Mammal
 	{
 		this.name = name;
 	}
+
+	public Mammal()
+	{
+
+	}
+
 	public abstract void makeNoise();
 }
