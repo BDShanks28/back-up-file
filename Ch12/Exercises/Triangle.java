@@ -5,12 +5,17 @@ public class Triangle
 	private String type;
 	private double side;
 
-	public Triangle(, double side)
+	public Triangle(double side)
   	{
     		this.side = side;
   	}
 
-  	public double getPerimeter();
+        public double getSide()
+        {
+                return side;
+        }
+
+  	public abstract double getPerimeter();
 
   	public abstract double getArea();
 
@@ -18,4 +23,11 @@ public class Triangle
   	{
     		return getArea()/getPerimeter();
   	}
+
+	@Override
+	public String toString()
+	{
+		return "This trianglr has an area of " +
+		    getArea() + " and a perimeter of "+  getPerimeter();
+	}
 }

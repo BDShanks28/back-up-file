@@ -1,4 +1,4 @@
-public class EquilateralTriangle
+public class EquilateralTriangle extends Traingle
 {
 	
 }
