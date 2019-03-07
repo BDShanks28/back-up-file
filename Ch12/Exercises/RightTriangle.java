@@ -12,12 +12,12 @@ public class RightTriangle extends Triangle
 	@Override
 	public double getArea()
 	{
-		return getSide()*2.0*0.5;
+		return (getSide()*2.0)*0.5;
 	}
 
 	@Override
 	public double getPerimeter()
 	{
-		return (getSide()*2.0)+(Math.Sqrt((getSide()*2)+(getSide()*2)));
+		return (getSide()*2.0)+(Math.sqrt((getSide()*2.0)+(getSide()*2.0)));
 	}
 }

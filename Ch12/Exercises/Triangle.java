@@ -1,6 +1,6 @@
 // Chapter 12 Question 6
 
-public class Triangle
+public abstract class Triangle
 {
 	private String type;
 	private double side;
