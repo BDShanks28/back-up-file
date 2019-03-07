@@ -27,7 +27,7 @@ public abstract class Triangle
 	@Override
 	public String toString()
 	{
-		return "This trianglr has an area of " +
+		return "This triangle has an area of " +
 		    getArea() + " and a perimeter of "+  getPerimeter();
 	}
 }
