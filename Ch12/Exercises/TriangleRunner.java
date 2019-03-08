@@ -5,5 +5,7 @@ public class TriangleRunner
                 Triangle[] myTriangle = new Triangle [2];
 		myTriangle[0] = new RightTriangle(5);
 		myTriangle[1] = new EquilateralTriangle(5);
+		System.out.println(myTriangle[0]);
+		System.out.println(myTriangle[1]);
         }
 }
