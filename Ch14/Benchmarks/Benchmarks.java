@@ -78,12 +78,50 @@ public class Benchmarks extends JFrame
    */
   private long runSort(double[] a, int sortMethod, int numberOfRuns)
   {
+	Random rng = new Random(seed);
 
-    _____________________________________________________
-    ...
-    }
+	for(int i = 0; i < a.length; i++)
+	{
+		a[i] = rng.nextDouble();
+	}
 
-    return totalTime;
+	long init = System.currentTimeMillis();
+
+	switch(sortMethod)
+	{
+		case 1:
+			for(int i = 0; i < numberOfRuns; i++)
+			{
+				SelectionSort.sort(a);
+			}
+			break;
+
+		case 2:
+                        for(int i = 0; i < numberOfRuns; i++)
+                        {
+                                InsertionSort.sort(a);
+                        }
+                        break;
+
+		case 3:
+                        for(int i = 0; i < numberOfRuns; i++)
+                        {
+                                Mergesort.sort(a);
+                        }
+                        break;
+
+		case 4:
+                        for(int i = 0; i < numberOfRuns; i++)
+                        {
+                                Quicksort.sort(a);
+                        }
+                        break;
+	}
+
+	long end = System.currentTimeMillis();
+	long totalTime = end - init;
+
+	return totalTime;
   }
 
   /**
