@@ -13,8 +13,14 @@ public class SortedListTest
     System.out.println("names1 = " + names1);
 
     System.out.println("set(0, \"Amy\") (was " + names1.set(0, "Amy") + ")");
+
+    System.out.println(names1);
+
 //  System.out.println("set(2, \"Ellen\") (was " + names1.set(2, "Ellen") + ")");
     System.out.println("set(4, \"Ellen\" (was " + names1.set(4, "Ellen") + ")");
+
+    System.out.println(names1);
+
     System.out.println("set(4, \"Evan\") (was " + names1.set(4, "Evan") + ")");
     System.out.println("names1 = " + names1);
 
